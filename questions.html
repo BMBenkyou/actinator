@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./background-parallax/background.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Akinator Questions</title>
+</head>
+<body>
+  <!-- Parallax Background -->
+  <div class="parallax-container">
+    <!-- Background gradient layer  -->
+    <div class="parallax-layer bg-gradient" data-speed="0.2"></div>
+    
+    <!-- Curved patterns layer -->
+    <div class="parallax-layer bg-curves" data-speed="0.4">
+      <div class="bg-circle bg-circle-1"></div>
+      <div class="bg-circle bg-circle-2"></div>
+      <div class="bg-circle bg-circle-3"></div>
+    </div>
+    
+    <!-- Diamonds layer  -->
+    <div class="parallax-layer diamonds-layer" data-speed="0.8">
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+      <div class="diamond"></div>
+    </div>
+  </div>
+
+  <!-- Main Game Container -->
+  <div class="game-container">
+    <!-- Akinator Character -->
+    <div class="character-container">
+      <img src="./imgs/akinator-2.png" alt="Akinator" class="akinator-img"/>
+    </div>
+    
+    <!-- Question Container -->
+    <div class="question-area">
+      <!-- Question Number -->
+      <div class="question-number">
+        <div class="number-badge">2</div>
+      </div>
+      
+      <!-- Question Text -->
+      <div class="question-box dialog-box">
+        <div>
+          <p><!--Questions--></p>
+        </div>
+      </div>
+      
+      <!-- Answer Options -->
+      <div class="answers-container dialog-box dialog-box2">
+        <div>
+          <button class="answer-btn">Yes</button>
+          <button class="answer-btn">No</button>
+          <button class="answer-btn">Don't know</button>
+          <button class="answer-btn">Probably</button>
+          <button class="answer-btn">Probably not</button>
+        </div>
+      </div>
+      
+      <!-- Navigation -->
+      <div class="navigation">
+        <button class="back-btn">
+          <span class="arrow">←</span> CORRECT
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
