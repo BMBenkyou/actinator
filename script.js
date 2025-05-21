@@ -324,38 +324,6 @@ document.addEventListener('DOMContentLoaded', function () {
       violations.push(resultType);
     }
 
-    if (violations.length > 1) {
-      let stackedInfo = `
-        <div style='font-weight: bold; margin-bottom: 15px; font-size: 1.2em; color: #e74c3c;'>
-          Multiple Violations Detected
-        </div>
-        <div style='margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;'>
-          <div style='font-weight: bold; margin-bottom: 10px;'>Tracked Violations:</div>
-          <ul style='list-style-type: none; padding-left: 0;'>
-      `;
-
-      violations.forEach(violation => {
-        const penalty = penalties[violation];
-        stackedInfo += `
-          <li style='margin-bottom: 10px; padding: 10px; border-left: 4px solid #e74c3c; background-color: white;'>
-            <div style='font-weight: bold; color: #e74c3c;'>${penalty.label}</div>
-            <div style='line-height: 1.5; margin-top: 5px;'>${penalty.info}</div>
-          </li>`;
-      });
-
-      stackedInfo += `
-          </ul>
-        </div>
-        <div style='margin-top: 20px; padding: 15px; background-color: #fff3cd; border-radius: 5px;'>
-          <div style='font-weight: bold; color: #856404;'>Important Note:</div>
-          <div style='margin-top: 10px; line-height: 1.5;'>
-            The perpetrator may face multiple penalties for these violations. Each violation carries its own penalty, and they may be served consecutively. Please consult with legal authorities for proper guidance on filing charges.
-          </div>
-        </div>
-      `;
-
-      questionText.innerHTML = stackedInfo;
-    } else {
       const result = penalties[resultType];
       questionText.innerHTML = `
         <div style="font-weight: bold; margin-bottom: 10px; color: #e74c3c;">${result.label}</div>
@@ -369,7 +337,6 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
       `;
-    }
 
     answerButtons.forEach(btn => {
       btn.style.display = 'none';
